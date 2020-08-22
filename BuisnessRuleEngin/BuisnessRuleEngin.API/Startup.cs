@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using BuisnessRuleEngin.DB;
+using BuisnessRuleEngine.Buisness;
+using BuisnessRuleEngine.Service;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -21,6 +24,11 @@ namespace BuisnessRuleEngin.API
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             // Register the Swagger generator
             services.AddSwaggerGen();
+            services.AddTransient<IBuisnessRuleEngineService, BuisnessRuleEngineService>();
+
+            services.AddTransient<IBuisnessRuleEngineBuisness, BuisnessRuleEngineBuisness>();
+
+            services.AddTransient<IBuisnessRuleEnginDB, BuisnessRuleEnginDB>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
