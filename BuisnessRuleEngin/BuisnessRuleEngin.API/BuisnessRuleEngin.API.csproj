@@ -11,4 +11,8 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.5.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BuisnessRuleEngineController.Model\BuisnessRuleEngineController.Model.csproj" />
+  </ItemGroup>
+
 </Project>
