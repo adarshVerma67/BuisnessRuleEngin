@@ -48,7 +48,7 @@ namespace BuisnessRuleEngin.API.Controllers
                 bool result = buisnessRuleEngineService.SubmitPayment(paymentDetails);
                 if (result)
                 {
-                    return Ok("sss");
+                    return Ok("Payment Success Fully Submitted");
                 }
                 return BadRequest();
             }

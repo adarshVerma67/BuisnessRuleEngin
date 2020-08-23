@@ -1,7 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using BuisnessRuleEngin.DB;
+﻿using BuisnessRuleEngin.DB;
+using BuisnessRuleEngine.Buisness.FactoryClasses;
+using BuisnessRuleEngine.Service.Classes;
 using BuisnessRuleEngineControllers.Model;
+using System;
+using System.Collections.Generic;
 
 namespace BuisnessRuleEngine.Buisness
 {
@@ -34,21 +36,48 @@ namespace BuisnessRuleEngine.Buisness
 
             try
             {
+                PaymentTypeFactory paymentFactory = null;
                 bool insertStatus = buisnessRuleEngineDB.SubmitPayment(paymentDetails);
                 if (insertStatus)
                 {
-                    //process different types of payment
+                    switch (paymentDetails.TypeofPayment)
+                    {
+                        case PaymentTypeEnum.PhysicalProduct:
+                            paymentFactory = new PaymentTypePhysicalProductFactory();
+                            break;
+                        case PaymentTypeEnum.Book:
+                            paymentFactory = new PaymentTypeBookFactory();
+                            break;
+                        case PaymentTypeEnum.MemberShip:
+                            paymentFactory = new PaymentTypeMemberShipFactory();
+                            break;
+                        case PaymentTypeEnum.Upgrade:
+                            paymentFactory = new PaymentTypeUpgradeFactory();
+                            break;
+                        case PaymentTypeEnum.LearningToSki:
+                            paymentFactory = new PaymentTypeLearningToSkiFactory();
+                            break;
+                        default:
+                            break;
+                    }
                 }
+
+                PaymentTypesBaseClass paymentTypesBaseClass = paymentFactory.GenerateTypeClass();
+                paymentTypesBaseClass.FillMinDetail("adarsh","8888888888");
+                paymentTypesBaseClass.GeneratePackingSlip(paymentDetails);
+
+                //process different types of payment
+
 
                 return insertStatus;
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw ;
+                throw;
             }
-           
+
         }
     }
 }
