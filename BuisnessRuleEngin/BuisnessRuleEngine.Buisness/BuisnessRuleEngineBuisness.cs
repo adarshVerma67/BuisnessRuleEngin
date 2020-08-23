@@ -45,7 +45,6 @@ namespace BuisnessRuleEngine.Buisness
                 bool insertStatus = buisnessRuleEngineDB.SubmitPayment(paymentDetails);
                 if (insertStatus)
                 {
-
                     PaymentTypesBaseClass paymentTypesBaseClass = paymentFactory?.GenerateTypeClass();
                     paymentTypesBaseClass.FillMinDetail(paymentDetails.Name, paymentDetails.PhoneNumber);
                     paymentTypesBaseClass.PerformOperations(paymentDetails);

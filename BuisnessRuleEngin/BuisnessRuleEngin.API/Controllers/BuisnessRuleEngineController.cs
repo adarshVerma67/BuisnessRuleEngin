@@ -29,7 +29,6 @@ namespace BuisnessRuleEngin.API.Controllers
             }
             catch (Exception)
             {
-
                 return BadRequest();
             }
 

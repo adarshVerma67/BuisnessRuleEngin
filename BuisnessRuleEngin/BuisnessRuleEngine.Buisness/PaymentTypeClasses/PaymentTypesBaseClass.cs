@@ -11,7 +11,7 @@ namespace BuisnessRuleEngine.Service.Classes
         /// </summary>
         /// <param name="name">name</param>
         /// <param name="phoneNumber">phoneNumber</param>
-        public abstract void FillMinDetail(string name, string phoneNumber);
+        public abstract void FillMinDetail(string name, long phoneNumber);
 
         /// <summary>
         /// Performs Payment Type Specific Actions

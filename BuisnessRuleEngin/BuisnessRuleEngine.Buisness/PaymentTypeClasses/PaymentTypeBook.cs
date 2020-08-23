@@ -6,7 +6,7 @@ namespace BuisnessRuleEngine.Service.Classes
     {
         private string name;
 
-        private string phoneNumber;
+        private long phoneNumber;
         public PaymentTypeBook() { }
 
         /// <summary>
@@ -14,7 +14,7 @@ namespace BuisnessRuleEngine.Service.Classes
         /// </summary>
         /// <param name="name">name</param>
         /// <param name="phoneNumber">phoneNumber</param>
-        public override void FillMinDetail(string _name, string _phoneNumber)
+        public override void FillMinDetail(string _name, long _phoneNumber)
         {
             name = _name;
             phoneNumber = _phoneNumber;

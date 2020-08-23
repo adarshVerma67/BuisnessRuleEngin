@@ -8,7 +8,7 @@ namespace BuisnessRuleEngine.Buisness.PaymentTypeClasses
     {
         private string name;
 
-        private string phoneNumber;
+        private long phoneNumber;
         public PaymentTypeLearningToSki() { }
 
         /// <summary>
@@ -16,7 +16,7 @@ namespace BuisnessRuleEngine.Buisness.PaymentTypeClasses
         /// </summary>
         /// <param name="name">name</param>
         /// <param name="phoneNumber">phoneNumber</param>
-        public override void FillMinDetail(string _name, string _phoneNumber)
+        public override void FillMinDetail(string _name, long _phoneNumber)
         {
             name = _name;
             phoneNumber = _phoneNumber;

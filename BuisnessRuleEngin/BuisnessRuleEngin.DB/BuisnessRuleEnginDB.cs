@@ -16,7 +16,7 @@ namespace BuisnessRuleEngin.DB
                 Name = "Ram",
                 Email = "ram@gmail.com",
                 Amount = 100,
-                PhoneNumber = "999444444",
+                PhoneNumber = 999444444,
                 TypeofPayment = PaymentTypeEnum.Book,
                 AgentName="Mohan",
                 Address = new AddressDetails { Address = "RamNagar", DoorNumber = 2, PinCode = "560066" }
@@ -26,7 +26,7 @@ namespace BuisnessRuleEngin.DB
                 Name = "Kris",
                 Email = "kris@gmail.com",
                 Amount = 100,
-                PhoneNumber = "999400000",
+                PhoneNumber = 999400000,
                 TypeofPayment = PaymentTypeEnum.PhysicalProduct,            
                 Address = new AddressDetails { Address = "RRNagar", DoorNumber = 2, PinCode = "560054" }
             });

@@ -36,7 +36,7 @@ namespace BuisnessRuleEngineTest
                 Name = "Ram",
                 Email = "ram@gmail.com",
                 Amount = 100,
-                PhoneNumber = "999444444",
+                PhoneNumber = 999444444,
                 TypeofPayment = PaymentTypeEnum.Book,
                 AgentName = "Mohan",
                 Address = new AddressDetails { Address = "RamNagar", DoorNumber = 2, PinCode = "560066" }
@@ -65,7 +65,7 @@ namespace BuisnessRuleEngineTest
                 Name = "Ram",
                 Email = "ram@gmail.com",
                 Amount = 100,
-                PhoneNumber = "999444444",
+                PhoneNumber = 999444444,
                 TypeofPayment = PaymentTypeEnum.Book,
                 AgentName = "Mohan",
                 Address = new AddressDetails { Address = "RamNagar", DoorNumber = 2, PinCode = "560066" }
@@ -84,7 +84,7 @@ namespace BuisnessRuleEngineTest
             Name = null,
             Email = "ram@gmail.com",
             Amount = 100,
-            PhoneNumber = "999444444",
+            PhoneNumber = 999444444,
             TypeofPayment = PaymentTypeEnum.Book,
             AgentName = "Mohan",
             Address = new AddressDetails { Address = "RamNagar", DoorNumber = 2, PinCode = "560066" }
@@ -95,7 +95,7 @@ namespace BuisnessRuleEngineTest
             Name = "Ram",
             Email = "ram@gmail.com",
             Amount = 0,
-            PhoneNumber = "999444444",
+            PhoneNumber = 999444444,
             TypeofPayment = PaymentTypeEnum.Book,
             AgentName = "Mohan",
             Address = new AddressDetails { Address = "RamNagar", DoorNumber = 2, PinCode = "560066" }
@@ -106,7 +106,7 @@ namespace BuisnessRuleEngineTest
             Name = "Ram",
             Email = "ram@gmail.com",
             Amount = 100,
-            PhoneNumber = null,
+            PhoneNumber = 999444444,
             TypeofPayment = PaymentTypeEnum.Book,
             AgentName = "Mohan",
             Address = new AddressDetails { Address = "RamNagar", DoorNumber = 2, PinCode = "560066" }
@@ -117,7 +117,7 @@ namespace BuisnessRuleEngineTest
             Name = "Ram",
             Email = null,
             Amount = 100,
-            PhoneNumber = "999444444",
+            PhoneNumber = 999444444,
             TypeofPayment = PaymentTypeEnum.Book,
             AgentName = "Mohan",
             Address = new AddressDetails { Address = "RamNagar", DoorNumber = 2, PinCode = "560066" }

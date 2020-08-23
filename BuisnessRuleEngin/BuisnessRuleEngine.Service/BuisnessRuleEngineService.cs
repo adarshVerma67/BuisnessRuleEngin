@@ -51,16 +51,15 @@ namespace BuisnessRuleEngine.Service
         private bool IsDataValid(PaymentDetails paymentDetails)
         {
             bool valid = true;
-            //validation of general data 
+            //validation of data  
             if (paymentDetails == null)
             {
-
                 valid = false;
             }
-            else if( paymentDetails.Name == null || paymentDetails.Amount == 0 || paymentDetails.Email == null ||
-                paymentDetails.PhoneNumber == null)
+            else if (paymentDetails.Name == null || paymentDetails.Amount == 0 || paymentDetails.Email == null ||
+                paymentDetails.PhoneNumber <=0)
             {
-                valid= false;
+                valid = false;
             }
 
             return valid;

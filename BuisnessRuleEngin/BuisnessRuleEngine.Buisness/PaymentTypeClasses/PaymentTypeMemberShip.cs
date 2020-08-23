@@ -8,7 +8,7 @@ namespace BuisnessRuleEngine.Service.Classes
 
         private string name;
 
-        private string phoneNumber;
+        private long phoneNumber;
         public PaymentTypeMemberShip() { }
 
         /// <summary>
@@ -16,7 +16,7 @@ namespace BuisnessRuleEngine.Service.Classes
         /// </summary>
         /// <param name="name">name</param>
         /// <param name="phoneNumber">phoneNumber</param>
-        public override void FillMinDetail(string _name, string _phoneNumber)
+        public override void FillMinDetail(string _name, long _phoneNumber)
         {
             name = _name;
             phoneNumber = _phoneNumber;
@@ -29,7 +29,7 @@ namespace BuisnessRuleEngine.Service.Classes
         public override void PerformOperations(PaymentDetails paymentDetails)
         {
             ActivateMembershi(name);
-            SendEmail(paymentDetails,"activation");
+            SendEmail(paymentDetails, "activation");
         }
 
         /// <summary>
@@ -41,8 +41,8 @@ namespace BuisnessRuleEngine.Service.Classes
             Console.WriteLine("***********");
             Console.WriteLine("Membership Activated for : {0} ", UserName);
             Console.WriteLine("***********");
-                    }
+        }
 
-    
+
     }
 }

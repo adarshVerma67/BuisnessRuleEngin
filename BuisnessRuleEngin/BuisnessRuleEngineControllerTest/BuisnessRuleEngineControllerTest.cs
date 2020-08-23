@@ -6,9 +6,9 @@ using Moq;
 using NUnit.Framework;
 using System;
 
-namespace Tests
+namespace BuisnessRuleEngineTest
 {
-    public class Tests
+    public class BuisnessRuleEngineControllerTest
     {
         private Mock<IBuisnessRuleEngineService> buisnessRuleEngineService;
         private BuisnessRuleEngineController buisnessRuleEngineController;
