@@ -27,7 +27,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataBase", "DataBase", "{A3
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuisnessRuleEngin.DB", "BuisnessRuleEngin.DB\BuisnessRuleEngin.DB.csproj", "{5CBBE0D3-B72B-416A-9910-F202FB37FE4E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuisnessRuleEngineControllerTest", "BuisnessRuleEngineControllerTest\BuisnessRuleEngineControllerTest.csproj", "{EABF4DCB-045B-4CFC-8E0E-230ECD2BFE0C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuisnessRuleEngineTest", "BuisnessRuleEngineControllerTest\BuisnessRuleEngineTest.csproj", "{EABF4DCB-045B-4CFC-8E0E-230ECD2BFE0C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
