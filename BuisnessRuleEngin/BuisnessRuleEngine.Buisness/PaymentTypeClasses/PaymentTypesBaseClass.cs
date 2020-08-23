@@ -40,7 +40,7 @@ namespace BuisnessRuleEngine.Service.Classes
         public virtual void SendEmail(PaymentDetails paymentDetails, string typeOfMembershipPayment)
         {
             Console.WriteLine("***********");
-            Console.WriteLine("Email Generated for \n Name : {0}\n Amount :{1}\n Email : {2}\n Type : {3}",
+            Console.WriteLine("Email Generated for \n Name : {0}\n Amount :{1}\n Email Id : {2}\n Type : {3}",
                 paymentDetails.Name, paymentDetails.Amount, paymentDetails.Email, typeOfMembershipPayment);
             Console.WriteLine("***********");
         }
@@ -52,7 +52,7 @@ namespace BuisnessRuleEngine.Service.Classes
         public virtual void GenerateCommission(PaymentDetails paymentDetails)
         {
             Console.WriteLine("***********");
-            Console.WriteLine("Email Generated for \n Name : {0}\n Amount : {1}\n Email : {2}",
+            Console.WriteLine("Email Generated for \n Name : {0}\n Amount : {1}\n Email Id: {2}",
                 paymentDetails.Name, paymentDetails.Amount, paymentDetails.Email);
             Console.WriteLine("***********");
         }
