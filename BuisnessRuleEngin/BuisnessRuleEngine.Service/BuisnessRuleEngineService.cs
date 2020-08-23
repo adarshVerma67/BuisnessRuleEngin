@@ -50,14 +50,20 @@ namespace BuisnessRuleEngine.Service
 
         private bool IsDataValid(PaymentDetails paymentDetails)
         {
+            bool valid = true;
             //validation of general data 
-
-            if (paymentDetails != null && (paymentDetails.Name == null || paymentDetails.Amount == 0 || paymentDetails.Email == null ||
-                paymentDetails.PhoneNumber == null))
+            if (paymentDetails == null)
             {
-                return false;
+
+                valid = false;
             }
-            return true;
+            else if( paymentDetails.Name == null || paymentDetails.Amount == 0 || paymentDetails.Email == null ||
+                paymentDetails.PhoneNumber == null)
+            {
+                valid= false;
+            }
+
+            return valid;
         }
     }
 }
