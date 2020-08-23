@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BuisnessRuleEngineController.Model
+namespace BuisnessRuleEngineControllers.Model
 {
     public class PaymentDetails
     {

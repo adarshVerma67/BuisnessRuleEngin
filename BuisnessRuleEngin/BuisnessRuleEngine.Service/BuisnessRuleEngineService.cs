@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using BuisnessRuleEngine.Buisness;
-using BuisnessRuleEngineController.Model;
+using BuisnessRuleEngineControllers.Model;
 
 namespace BuisnessRuleEngine.Service
 {

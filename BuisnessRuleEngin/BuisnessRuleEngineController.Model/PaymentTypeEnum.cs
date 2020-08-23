@@ -1,4 +1,4 @@
-﻿namespace BuisnessRuleEngineController.Model
+﻿namespace BuisnessRuleEngineControllers.Model
 {
     public enum PaymentTypeEnum
     {

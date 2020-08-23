@@ -1,4 +1,4 @@
-﻿using BuisnessRuleEngineController.Model;
+﻿using BuisnessRuleEngineControllers.Model;
 using System.Collections.Generic;
 
 namespace BuisnessRuleEngin.DB

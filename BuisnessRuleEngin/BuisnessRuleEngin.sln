@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.1062
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuisnessRuleEngin.API", "BuisnessRuleEngin.API\BuisnessRuleEngin.API.csproj", "{9C903881-9442-458C-B2B0-8B7575242765}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuisnessRuleEngin.API", "BuisnessRuleEngin.API\BuisnessRuleEngin.API.csproj", "{9C903881-9442-458C-B2B0-8B7575242765}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{E1394420-7C0A-4BCB-98E9-74A16579654F}"
 EndProject
@@ -17,15 +17,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{87147ACD-2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{BD000A9B-C2B4-4461-B7A6-9AFD51C3268F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuisnessRuleEngineController.Model", "BuisnessRuleEngineController.Model\BuisnessRuleEngineController.Model.csproj", "{63BD48DC-F777-4E61-8EC6-A445A837C692}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuisnessRuleEngineControllers.Model", "BuisnessRuleEngineController.Model\BuisnessRuleEngineControllers.Model.csproj", "{63BD48DC-F777-4E61-8EC6-A445A837C692}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuisnessRuleEngine.Buisness", "BuisnessRuleEngine.Buisness\BuisnessRuleEngine.Buisness.csproj", "{C19AEBF7-6177-435F-AAB6-C6CE8D38E154}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuisnessRuleEngine.Buisness", "BuisnessRuleEngine.Buisness\BuisnessRuleEngine.Buisness.csproj", "{C19AEBF7-6177-435F-AAB6-C6CE8D38E154}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuisnessRuleEngine.Service", "BuisnessRuleEngine.Service\BuisnessRuleEngine.Service.csproj", "{377FC531-A7EB-43E5-B33C-D4279915CA0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuisnessRuleEngine.Service", "BuisnessRuleEngine.Service\BuisnessRuleEngine.Service.csproj", "{377FC531-A7EB-43E5-B33C-D4279915CA0B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataBase", "DataBase", "{A37FBF06-C310-4A74-996E-9CAC74C8F759}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuisnessRuleEngin.DB", "BuisnessRuleEngin.DB\BuisnessRuleEngin.DB.csproj", "{5CBBE0D3-B72B-416A-9910-F202FB37FE4E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuisnessRuleEngin.DB", "BuisnessRuleEngin.DB\BuisnessRuleEngin.DB.csproj", "{5CBBE0D3-B72B-416A-9910-F202FB37FE4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuisnessRuleEngineControllerTest", "BuisnessRuleEngineControllerTest\BuisnessRuleEngineControllerTest.csproj", "{EABF4DCB-045B-4CFC-8E0E-230ECD2BFE0C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,17 +55,23 @@ Global
 		{5CBBE0D3-B72B-416A-9910-F202FB37FE4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5CBBE0D3-B72B-416A-9910-F202FB37FE4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5CBBE0D3-B72B-416A-9910-F202FB37FE4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EABF4DCB-045B-4CFC-8E0E-230ECD2BFE0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EABF4DCB-045B-4CFC-8E0E-230ECD2BFE0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EABF4DCB-045B-4CFC-8E0E-230ECD2BFE0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EABF4DCB-045B-4CFC-8E0E-230ECD2BFE0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{9C903881-9442-458C-B2B0-8B7575242765} = {E1394420-7C0A-4BCB-98E9-74A16579654F}
+		{AB184124-1CCD-4D57-A3AE-6AB3B4D7B1E5} = {A37FBF06-C310-4A74-996E-9CAC74C8F759}
 		{BD000A9B-C2B4-4461-B7A6-9AFD51C3268F} = {AB184124-1CCD-4D57-A3AE-6AB3B4D7B1E5}
 		{63BD48DC-F777-4E61-8EC6-A445A837C692} = {BD000A9B-C2B4-4461-B7A6-9AFD51C3268F}
 		{C19AEBF7-6177-435F-AAB6-C6CE8D38E154} = {5B6BE83A-D629-44BD-903E-E001D3DB7319}
 		{377FC531-A7EB-43E5-B33C-D4279915CA0B} = {33E54E2C-BC67-4D0D-B194-28F097B196A8}
 		{5CBBE0D3-B72B-416A-9910-F202FB37FE4E} = {A37FBF06-C310-4A74-996E-9CAC74C8F759}
+		{EABF4DCB-045B-4CFC-8E0E-230ECD2BFE0C} = {87147ACD-2091-4BD4-BD95-76EC55E5A302}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {359D02DF-01E0-4408-AD84-54DF8E1675B5}

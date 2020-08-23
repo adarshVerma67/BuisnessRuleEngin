@@ -1,5 +1,5 @@
 ﻿using BuisnessRuleEngine.Service;
-using BuisnessRuleEngineController.Model;
+using BuisnessRuleEngineControllers.Model;
 using Microsoft.AspNetCore.Mvc;
 using System;
 
@@ -22,7 +22,16 @@ namespace BuisnessRuleEngin.API.Controllers
         [HttpGet("GetAllPayments")]
         public ActionResult GetAllPayments()
         {
-            return Ok(buisnessRuleEngineService.GetAllPayments());
+            try
+            {
+
+                return Ok(buisnessRuleEngineService.GetAllPayments());
+            }
+            catch (Exception)
+            {
+
+                return BadRequest();
+            }
 
         }
 
@@ -37,9 +46,6 @@ namespace BuisnessRuleEngin.API.Controllers
             try
             {
                 bool result = buisnessRuleEngineService.SubmitPayment(paymentDetails);
-
-                //return result ? Ok("sss") : BadRequest();
-
                 if (result)
                 {
                     return Ok("sss");

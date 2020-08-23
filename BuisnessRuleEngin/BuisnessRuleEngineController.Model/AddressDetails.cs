@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace BuisnessRuleEngineController.Model
+namespace BuisnessRuleEngineControllers.Model
 {
-   public class AddressDetails
+    public class AddressDetails
     {
         public int DoorNumber { get; set; }
 

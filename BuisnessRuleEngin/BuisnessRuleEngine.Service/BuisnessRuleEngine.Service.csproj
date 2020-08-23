@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BuisnessRuleEngine.Buisness\BuisnessRuleEngine.Buisness.csproj" />
-    <ProjectReference Include="..\BuisnessRuleEngineController.Model\BuisnessRuleEngineController.Model.csproj" />
+    <ProjectReference Include="..\BuisnessRuleEngineController.Model\BuisnessRuleEngineControllers.Model.csproj" />
   </ItemGroup>
 
 </Project>
