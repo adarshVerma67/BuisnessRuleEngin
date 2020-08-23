@@ -5,9 +5,13 @@ namespace BuisnessRuleEngine.Service.Classes
     public class PaymentTypePhysicalProduct : PaymentTypesBaseClass
     {
         private string name;
-
         private long phoneNumber;
-        public PaymentTypePhysicalProduct() { }
+        private readonly string department;
+
+        public PaymentTypePhysicalProduct()
+        {
+            department = "Shipping";
+        }
 
         /// <summary>
         /// Fills Name and phone number
@@ -26,7 +30,7 @@ namespace BuisnessRuleEngine.Service.Classes
         /// <param name="paymentDetails">paymentDetails</param>
         public override void PerformOperations(PaymentDetails paymentDetails)
         {
-            base.GeneratePackingSlip(paymentDetails, "Shipping");
+            base.GeneratePackingSlip(paymentDetails, department);
             GenerateCommission(paymentDetails);
         }
     }

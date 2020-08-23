@@ -5,8 +5,8 @@ namespace BuisnessRuleEngine.Service.Classes
     public class PaymentTypeBook : PaymentTypesBaseClass
     {
         private string name;
-
         private long phoneNumber;
+
         public PaymentTypeBook() { }
 
         /// <summary>

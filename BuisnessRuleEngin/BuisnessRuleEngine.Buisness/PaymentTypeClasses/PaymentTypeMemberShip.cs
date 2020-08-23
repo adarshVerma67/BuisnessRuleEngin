@@ -5,11 +5,14 @@ namespace BuisnessRuleEngine.Service.Classes
 {
     public class PaymentTypeMemberShip : PaymentTypesBaseClass
     {
-
         private string name;
-
         private long phoneNumber;
-        public PaymentTypeMemberShip() { }
+        private readonly string typeOfMembershipPayment;
+
+        public PaymentTypeMemberShip()
+        {
+            typeOfMembershipPayment = "activation";
+        }
 
         /// <summary>
         /// Fills Name and phone number
@@ -29,7 +32,7 @@ namespace BuisnessRuleEngine.Service.Classes
         public override void PerformOperations(PaymentDetails paymentDetails)
         {
             ActivateMembershi(name);
-            SendEmail(paymentDetails, "activation");
+            SendEmail(paymentDetails, typeOfMembershipPayment);
         }
 
         /// <summary>
@@ -42,7 +45,5 @@ namespace BuisnessRuleEngine.Service.Classes
             Console.WriteLine("Membership Activated for : {0} ", UserName);
             Console.WriteLine("***********");
         }
-
-
     }
 }

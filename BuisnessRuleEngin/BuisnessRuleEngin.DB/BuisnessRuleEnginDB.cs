@@ -46,7 +46,6 @@ namespace BuisnessRuleEngin.DB
             }
             catch (Exception)
             {
-
                 throw;
             }
 

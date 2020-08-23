@@ -25,7 +25,6 @@ namespace BuisnessRuleEngine.Buisness
             return buisnessRuleEngineDB.GetAllPayments();
         }
 
-
         /// <summary>
         /// Used to submit new Payment
         /// </summary>

@@ -1,17 +1,19 @@
 ﻿using BuisnessRuleEngine.Service.Classes;
 using BuisnessRuleEngineControllers.Model;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace BuisnessRuleEngine.Buisness.PaymentTypeClasses
 {
-  public  class PaymentTypeUpgrade : PaymentTypesBaseClass
+    public class PaymentTypeUpgrade : PaymentTypesBaseClass
     {
         private string name;
-
         private long phoneNumber;
-        public PaymentTypeUpgrade() { }
+        private readonly string typeOfMembershipPayment;
+
+        public PaymentTypeUpgrade()
+        {
+            typeOfMembershipPayment = "Update";
+        }
 
         /// <summary>
         /// Fills Name and phone number
@@ -31,9 +33,8 @@ namespace BuisnessRuleEngine.Buisness.PaymentTypeClasses
         public override void PerformOperations(PaymentDetails paymentDetails)
         {
             UpGradeMenberShip(name);
-            SendEmail(paymentDetails, "Update");
+            SendEmail(paymentDetails, typeOfMembershipPayment);
         }
-
 
         /// <summary>
         /// Updates Membership

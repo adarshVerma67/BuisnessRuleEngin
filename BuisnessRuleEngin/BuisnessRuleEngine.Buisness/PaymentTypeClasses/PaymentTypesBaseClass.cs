@@ -38,7 +38,7 @@ namespace BuisnessRuleEngine.Service.Classes
         /// <param name="paymentDetails">paymentDetails</param>
         /// <param name="typeOfMembershipPayment">typeOfMembershipPayment</param>
         public virtual void SendEmail(PaymentDetails paymentDetails, string typeOfMembershipPayment)
-        {//Generate payment slip 
+        {
             Console.WriteLine("***********");
             Console.WriteLine("Email Generated for \n Name : {0}\n Amount :{1}\n Email : {2}\n Type : {3}",
                 paymentDetails.Name, paymentDetails.Amount, paymentDetails.Email, typeOfMembershipPayment);
@@ -50,7 +50,7 @@ namespace BuisnessRuleEngine.Service.Classes
         /// </summary>
         /// <param name="paymentDetails">paymentDetails</param>
         public virtual void GenerateCommission(PaymentDetails paymentDetails)
-        {//Generate payment slip 
+        {
             Console.WriteLine("***********");
             Console.WriteLine("Email Generated for \n Name : {0}\n Amount : {1}\n Email : {2}",
                 paymentDetails.Name, paymentDetails.Amount, paymentDetails.Email);
