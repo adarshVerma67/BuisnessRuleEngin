@@ -36,34 +36,20 @@ namespace BuisnessRuleEngine.Buisness
             try
             {
                 PaymentTypeFactory paymentFactory = null;
+                paymentFactory = GenerateType(paymentDetails.TypeofPayment);
+                if (paymentFactory == null)
+                {
+                    return false;
+                }
+
                 bool insertStatus = buisnessRuleEngineDB.SubmitPayment(paymentDetails);
                 if (insertStatus)
                 {
-                    switch (paymentDetails.TypeofPayment)
-                    {
-                        case PaymentTypeEnum.PhysicalProduct:
-                            paymentFactory = new PaymentTypePhysicalProductFactory();
-                            break;
-                        case PaymentTypeEnum.Book:
-                            paymentFactory = new PaymentTypeBookFactory();
-                            break;
-                        case PaymentTypeEnum.MemberShip:
-                            paymentFactory = new PaymentTypeMemberShipFactory();
-                            break;
-                        case PaymentTypeEnum.Upgrade:
-                            paymentFactory = new PaymentTypeUpgradeFactory();
-                            break;
-                        case PaymentTypeEnum.LearningToSki:
-                            paymentFactory = new PaymentTypeLearningToSkiFactory();
-                            break;
-                        default:
-                            return false;
-                    }
-                }
 
-                PaymentTypesBaseClass paymentTypesBaseClass = paymentFactory.GenerateTypeClass();
-                paymentTypesBaseClass.FillMinDetail("adarsh", "8888888888");
-                paymentTypesBaseClass.PerformOperations(paymentDetails);
+                    PaymentTypesBaseClass paymentTypesBaseClass = paymentFactory?.GenerateTypeClass();
+                    paymentTypesBaseClass.FillMinDetail(paymentDetails.Name, paymentDetails.PhoneNumber);
+                    paymentTypesBaseClass.PerformOperations(paymentDetails);
+                }
 
                 return insertStatus;
 
@@ -73,6 +59,33 @@ namespace BuisnessRuleEngine.Buisness
                 throw;
             }
 
+        }
+
+        private PaymentTypeFactory GenerateType(PaymentTypeEnum typeofPayment)
+        {
+            PaymentTypeFactory paymentFactory;
+            switch (typeofPayment)
+            {
+                case PaymentTypeEnum.PhysicalProduct:
+                    paymentFactory = new PaymentTypePhysicalProductFactory();
+                    break;
+                case PaymentTypeEnum.Book:
+                    paymentFactory = new PaymentTypeBookFactory();
+                    break;
+                case PaymentTypeEnum.MemberShip:
+                    paymentFactory = new PaymentTypeMemberShipFactory();
+                    break;
+                case PaymentTypeEnum.Upgrade:
+                    paymentFactory = new PaymentTypeUpgradeFactory();
+                    break;
+                case PaymentTypeEnum.LearningToSki:
+                    paymentFactory = new PaymentTypeLearningToSkiFactory();
+                    break;
+                default:
+                    return null;
+            }
+
+            return paymentFactory;
         }
     }
 }
