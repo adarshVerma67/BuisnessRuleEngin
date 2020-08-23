@@ -33,7 +33,6 @@ namespace BuisnessRuleEngine.Buisness
         /// <returns>true/False</returns>
         public bool SubmitPayment(PaymentDetails paymentDetails)
         {
-
             try
             {
                 PaymentTypeFactory paymentFactory = null;
@@ -58,23 +57,19 @@ namespace BuisnessRuleEngine.Buisness
                             paymentFactory = new PaymentTypeLearningToSkiFactory();
                             break;
                         default:
-                            break;
+                            return false;
                     }
                 }
 
                 PaymentTypesBaseClass paymentTypesBaseClass = paymentFactory.GenerateTypeClass();
-                paymentTypesBaseClass.FillMinDetail("adarsh","8888888888");
-                paymentTypesBaseClass.GeneratePackingSlip(paymentDetails);
-
-                //process different types of payment
-
+                paymentTypesBaseClass.FillMinDetail("adarsh", "8888888888");
+                paymentTypesBaseClass.PerformOperations(paymentDetails);
 
                 return insertStatus;
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-
                 throw;
             }
 

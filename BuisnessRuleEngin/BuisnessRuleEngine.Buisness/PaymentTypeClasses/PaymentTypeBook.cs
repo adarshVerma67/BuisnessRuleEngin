@@ -9,6 +9,11 @@ namespace BuisnessRuleEngine.Service.Classes
         private string phoneNumber;
         public PaymentTypeBook() { }
 
+        /// <summary>
+        /// Fills Name and phone number
+        /// </summary>
+        /// <param name="name">name</param>
+        /// <param name="phoneNumber">phoneNumber</param>
         public override void FillMinDetail(string _name, string _phoneNumber)
         {
             name = _name;
@@ -23,8 +28,14 @@ namespace BuisnessRuleEngine.Service.Classes
 
         }
 
+        /// <summary>
+        /// Performs Payment Type Specific Actions
+        /// </summary>
+        /// <param name="paymentDetails">paymentDetails</param>
         public override void PerformOperations(PaymentDetails paymentDetails)
         {
+            GeneratePackingSlip(paymentDetails);
+            GenerateCommission(paymentDetails);
         }
     }
 }

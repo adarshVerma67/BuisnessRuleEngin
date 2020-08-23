@@ -11,20 +11,38 @@ namespace BuisnessRuleEngine.Service.Classes
         private string phoneNumber;
         public PaymentTypeMemberShip() { }
 
+        /// <summary>
+        /// Fills Name and phone number
+        /// </summary>
+        /// <param name="name">name</param>
+        /// <param name="phoneNumber">phoneNumber</param>
         public override void FillMinDetail(string _name, string _phoneNumber)
         {
             name = _name;
             phoneNumber = _phoneNumber;
         }
 
+        /// <summary>
+        /// Performs Payment Type Specific Actions
+        /// </summary>
+        /// <param name="paymentDetails">paymentDetails</param>
         public override void PerformOperations(PaymentDetails paymentDetails)
         {
+            ActivateMembershi(name);
+            SendEmail(paymentDetails,"activation");
         }
 
-        private void SendEmail(PaymentDetails paymentDetails)
-        {//Generate payment slip 
-            Console.WriteLine("Email Generated for \\n Name :{0}\\n Amount :{1}\\n Email :{2}",
-                paymentDetails.Name, paymentDetails.Amount, paymentDetails.Email);
-        }
+        /// <summary>
+        /// Activates Membership
+        /// </summary>
+        /// <param name="UserName">UserName</param>
+        private void ActivateMembershi(string UserName)
+        {
+            Console.WriteLine("***********");
+            Console.WriteLine("Membership Activated for : {0} ", UserName);
+            Console.WriteLine("***********");
+                    }
+
+    
     }
 }
