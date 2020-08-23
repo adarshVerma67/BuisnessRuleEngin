@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using BuisnessRuleEngine.Buisness;
+﻿using BuisnessRuleEngine.Buisness;
 using BuisnessRuleEngineControllers.Model;
+using System;
+using System.Collections.Generic;
 
 namespace BuisnessRuleEngine.Service
 {
@@ -20,7 +20,14 @@ namespace BuisnessRuleEngine.Service
         /// <returns>List of Payments</returns>
         public List<PaymentDetails> GetAllPayments()
         {
-            return buisnessRuleEngineBuisness.GetAllPayments();
+            try
+            {
+                return buisnessRuleEngineBuisness.GetAllPayments();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         /// <summary>
@@ -29,8 +36,28 @@ namespace BuisnessRuleEngine.Service
         /// <param name="paymentDetails">payment Details</param>
         /// <returns>true/False</returns>
         public bool SubmitPayment(PaymentDetails paymentDetails)
-        {//validation of general data 
-            return buisnessRuleEngineBuisness.SubmitPayment(paymentDetails);
+        {
+            try
+            {
+                return IsDataValid(paymentDetails) ? buisnessRuleEngineBuisness.SubmitPayment(paymentDetails) : false; ;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+        }
+
+        private bool IsDataValid(PaymentDetails paymentDetails)
+        {
+            //validation of general data 
+
+            if (paymentDetails != null && (paymentDetails.Name == null || paymentDetails.Amount == 0 || paymentDetails.Email == null ||
+                paymentDetails.PhoneNumber == null))
+            {
+                return false;
+            }
+            return true;
         }
     }
 }
